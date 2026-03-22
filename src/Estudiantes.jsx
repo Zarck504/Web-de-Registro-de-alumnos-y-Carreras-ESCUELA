@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom"; // Importar useNavigate
-import estudiantesData from "./estudiantes.json"; // Asegúrate de importar el JSON
+import estudiantesData from "./Estudiantes.json"; // Asegúrate de importar el JSON
 import "bootstrap/dist/css/bootstrap.min.css";
 
 const Estudiantes = () => {
