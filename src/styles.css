@@ -1,0 +1,166 @@
+/* Estilos generales */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #a9c7a1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  padding: 21px;
+  width: 100%;
+  max-width: 1200px; 
+  margin: auto;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #cff0c0;
+  padding: 15px;
+  color: white;
+  border-radius: 8px;
+}
+
+.logo {
+  width: 100px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+nav button.btn-outline-primary {
+  background-color: #145A32 !important; /* Verde oscuro */
+  color: white !important;
+  border-color: #145A32 !important;
+  font-size: 16px;
+  margin: 0 15px;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+nav button.btn-outline-primary:hover {
+  background-color: #1E8449 !important; /* Verde más fuerte */
+  border-color: #1E8449 !important;
+  transform: scale(1.05);
+}
+
+input {
+  padding: 8px;
+  border-radius: 5px;
+  border: none;
+  width: 100%;
+  max-width: 250px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+/* Estilos de cada tarjeta */
+.card {
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s;
+  color: white;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+/* Colores personalizados por carrera */
+.tecnologia { background-color: #007BFF; }
+.negocios { background-color: #DC3545; }
+.mantenimiento { background-color: #FD7E14; }
+.administracion { background-color: #17A2B8; }
+.industrial { background-color: #28A745; }
+.terapia { background-color: #6F42C1; }
+.civil { background-color: #343A40; }
+.mecatronica { background-color: #007BFF; }
+.mecanica { background-color: #DC3545; }
+.textil { background-color: #FFC107; color: black; }
+.enfermeria { background-color: #17A2B8; }
+.medico { background-color: #28A745; }
+.contaduria { background-color: #DC3545; }
+.recursos { background-color: #155724; }
+
+/* Botón explorar */
+.explorar {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background: #221f1f36;
+  color: inherit;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.explorar:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+/* Estilos para el input de búsqueda */
+.busqueda {
+  margin-top: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 1000px; /* Ajusta el tamaño máximo */
+  background-color: white;
+  color: rgb(255, 255, 255);
+}
+
+/* En pantallas pequeñas, que ocupe todo el ancho */
+@media (max-width: 768px) {
+  .busqueda {
+    max-width: 100%;
+  }
+}
+
+
+/* Responsividad */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+  }
+
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  nav button {
+    font-size: 14px;
+  }
+}
